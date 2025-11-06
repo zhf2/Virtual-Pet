@@ -28,9 +28,18 @@ class Pet {
         this.#discipline = clamp(this.#discipline + value, 0, 10);
     }
 
+    changeBladder(value) {
+        this.#bladder += value;
+        if (bladder >= 10) {
+            // excrete
+            bladder -= 10;
+        }
+    }
+
     feed(food) {
-        if (this.hunger >= this.maxHunger * 0.8) {
-            this.discipline -= 1;
+        // If hunger is too high, 
+        if (this.#hunger >= this.#maxHunger * 0.8) {
+            this.changeDiscipline(-1);
         }
     }
 }
