@@ -3,8 +3,8 @@ function clamp(value, min, max) {
 }
 
 function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    minCeil = Math.ceil(min);
+    return Math.floor(Math.random() * (max - minCeil + 1)) + minCeil;
 }
 
 // The main pet
